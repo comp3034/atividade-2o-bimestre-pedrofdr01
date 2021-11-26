@@ -2,80 +2,103 @@ GET http://127.0.0.1:8000/hello/2021
 
 
 
-
+###
+GET http://127.0.0.1:8000/measures/
 
 
 
 ###
-POST http://127.0.0.1:8082/users/
+POST http://127.0.0.1:8000/users/
 Content-Type: application/json
 
 {
-    "name": "Mario Ix",
-    "email": "mhadaniya1ix@email.com",
+    "name": "Mario",
+    "email": "mario@email.com",
     "password": "12345"
 }
 
 
 
-
-
+###
+GET http://127.0.0.1:8082/users/3
 
 
 
 ###
-GET http://127.0.0.1:8082/users/
-
-
-
-
-
-
-
-###
-GET http://127.0.0.1:8082/users/1
-
-
-###
-PUT http://127.0.0.1:8082/users/1
+POST http://127.0.0.1:8082/users/4/measures/
 Content-Type: application/json
 
 {
-    
+    "height": "70",
+    "weight": "70",
+    "neck": "70",
+    "chest": "70",
+    "biceps": "70",
+    "waist": "70",
+    "thighs": "70",
+    "calf": "70"
 }
 
 
 
 
-
-
-
-
-
 ###
-POST http://127.0.0.1:8000/users
+POST http://127.0.0.1:8082/users
 Content-Type: application/json
 
 {
-    "name": "Ricardo Silva",
-    "email": "ricardo.silva@email.com"
+    "name": "Pedro Fernando Dalbello rocha",
+    "email": "pedrofdr01@gmail.com",
+    "password": "12345"
 }
 
 
 
+###
+POST http://127.0.0.1:8082/users
+Content-Type: application/json
 
-
+{
+    "name": "TESTE",
+    "email": "teste@gmail.com",
+    "password": "teste"
+}
 
 
 
 ###
-PUT http://127.0.0.1:8000/users/8
-Content-Type: application/json
+GET http://127.0.0.1:8082/users/3
 
-{
-    "name": "Nome",
-    "price": 1
-}
+
+
+###
+GET http://127.0.0.1:8082/users/3/measures/
+
+
 
 ### 
-DELETE http://127.0.0.1:8000/users/8
+DELETE http://127.0.0.1:8082/users/4
+
+
+
+###
+PUT http://127.0.0.1:8082/users/3
+Content-Type: application/json
+
+{
+    "name": "Pedro Fernando Dalbello rocha",
+    "email": "pedro.rocha@edu.unifil.br",
+    "birth_date": "2000-10-03"
+}
+
+
+
+###
+PATCH http://127.0.0.1:8082/users/3
+Content-Type: application/json
+
+{
+    "name": "Pedro Fernando Dalbello rocha",
+    "email": "pedro.rocha@edu.unifil.br",
+    "birth_date": "2000-10-03"
+}
